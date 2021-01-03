@@ -1,16 +1,16 @@
-print("------------zhuolingmin----------------- \n")
-temp = input("Do you want input which number \n")
-guess = int(temp)
+import random
 
-for i in range(5):
-    if guess == 8:
-        print("you guessed right \n")
-        break
+num = random.randint(1, 100)
+
+for i in range(1,6):
+    guess = int(input('please guess: '))
+    if guess > num:
+        print(" the number too big \n")
+    elif guess < num:
+        print('the number too small \n')
     else:
-        print("you guessed wrong \n")
-    temp = input("you can guess aganst \n")
-    guess = int(temp)
-
-
-print("---------------finish the game--------------- \n")
-
+        print('congratulation !')
+        exit()
+else:
+    print('game over !')
+    
